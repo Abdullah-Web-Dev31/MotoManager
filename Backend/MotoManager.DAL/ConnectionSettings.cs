@@ -10,7 +10,7 @@ namespace MotoManager.DAL
     public static class ConnectionSettings
     {
 
-        public static string ConnectionString { get; set; } = string.Empty;
+        public static  string  ConnectionString = string.Empty;
 
 
         public static SqlConnection _GetConnection()=>new SqlConnection(ConnectionString);
