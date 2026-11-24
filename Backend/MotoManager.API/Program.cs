@@ -2,9 +2,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
-
+using MotoManager.DAL;
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+ConnectionSettings.ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 var jwtKey = builder.Configuration["jwt:Key"];
 var issuer = builder.Configuration["jwt:Issuer"];
 var audience = builder.Configuration["jwt:Audience"];
