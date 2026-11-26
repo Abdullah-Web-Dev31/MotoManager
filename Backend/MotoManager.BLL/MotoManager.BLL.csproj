@@ -5,6 +5,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MotoManager.Common\MotoManager.Common.csproj" />
     <ProjectReference Include="..\MotoManager.DAL\MotoManager.DAL.csproj" />
   </ItemGroup>
 
