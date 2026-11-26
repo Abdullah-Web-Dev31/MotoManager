@@ -26,6 +26,7 @@ namespace MotoManager.DAL
                         {
                             Direction = System.Data.ParameterDirection.Output
                         };
+                        comm.Parameters.Add(outputParam);
                         var result = await comm.ExecuteScalarAsync();
                         return outputParam.Value != DBNull.Value && (bool)outputParam.Value;
                     }
@@ -53,6 +54,8 @@ namespace MotoManager.DAL
                         {
                             Direction = System.Data.ParameterDirection.Output
                         };
+                        comm.Parameters.Add(outputParam);
+
                         var result = await comm.ExecuteScalarAsync();
                         return outputParam.Value != DBNull.Value && (bool)outputParam.Value;
                     }
